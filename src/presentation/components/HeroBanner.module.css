@@ -1,0 +1,89 @@
+.banner {
+  height: 90vh;
+  width: 100%;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at left,
+    rgba(0, 0, 0, 0.6),
+    transparent 60%
+  );
+  z-index: -1;
+}
+
+.content {
+  max-width: 700px;
+  width: 100%;
+}
+
+h1,
+p,
+button {
+  color: #fff;
+}
+
+h1 {
+  font-size: clamp(3rem, 4vw, 6rem);
+}
+
+p {
+  max-width: 600px;
+  width: 100%;
+  margin: 1rem 0;
+  font-size: clamp(1.2rem, 1.1vw, 2rem);
+  line-height: 1.5;
+}
+
+.playButton,
+.infoButton {
+  height: 2rem;
+  width: 8rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.playButton:hover,
+.infoButton:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.playButton:hover {
+  opacity: 0.85;
+}
+
+.infoButton:hover {
+  background-color: #ffffff34;
+}
+
+.playButton {
+  background-color: #e50914;
+  margin: 1rem 1rem 0 0;
+}
+
+.playButton::before {
+  content: "▶ ";
+}
+
+.infoButton {
+  background-color: #b3b3b37e;
+}
+
+.infoButton::before {
+  content: "ⓘ ";
+  font-weight: bold;
+}

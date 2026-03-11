@@ -1,0 +1,28 @@
+.movieRowSection {
+  width: 100%;
+}
+
+.rowName {
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: clamp(1.8rem, 3vh, 4rem);
+  margin: 0.5rem 0 0.5rem 1rem;
+}
+
+.scrollContainer {
+  overflow-x: auto;
+  overflow-y: visible;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.moviesContainer {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin: 0 1rem 1rem;
+}
+
+.scrollContainer::-webkit-scrollbar {
+  display: none;
+}

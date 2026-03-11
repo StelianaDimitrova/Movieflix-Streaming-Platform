@@ -1,0 +1,26 @@
+.logo {
+  height: 2.5rem;
+  filter:saturate(120%);
+}
+
+.navigation {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navLink {
+  text-decoration: none;
+  font-size: large;
+  font-family: "Inter";
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.navLink:hover {
+  color: #b3b3b3;
+}
+
+.active {
+  font-weight: bold;
+  border-bottom: 2px solid red;
+}

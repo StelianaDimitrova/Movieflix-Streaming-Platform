@@ -1,0 +1,20 @@
+header {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 1rem 2rem;
+  gap: 2rem;
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  /* background-color: rgba(0, 0, 0, 0.411); */
+  /* background-color: black; */
+}
+
+main {
+  background-color: rgb(35,35,35);;
+}
+
+footer {
+  border: 1px solid green;
+}
