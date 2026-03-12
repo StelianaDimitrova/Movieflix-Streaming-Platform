@@ -14,10 +14,17 @@ export default function Home() {
 
   useEffect(() => {
     const loadMovies = async () => {
-      const loadedTrendingMovies = await fetchMovies(endpoints.trending);
-      const loadedPopularMovies = await fetchMovies(endpoints.popular);
-      const loadedTopRatedMovies = await fetchMovies(endpoints.topRated);
-      const loadedUpcomingMovies = await fetchMovies(endpoints.upcoming);
+      const [
+        loadedTrendingMovies,
+        loadedPopularMovies,
+        loadedTopRatedMovies,
+        loadedUpcomingMovies,
+      ] = await Promise.all([
+        fetchMovies(endpoints.trending),
+        fetchMovies(endpoints.popular),
+        fetchMovies(endpoints.topRated),
+        fetchMovies(endpoints.upcoming),
+      ]);
 
       setTrendingMovies(loadedTrendingMovies);
       setPopularMovies(loadedPopularMovies);
