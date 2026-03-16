@@ -1,3 +1,3 @@
-export default function Button({ customClassName, title = "" }) {
-  return <button className={customClassName}>{title}</button>;
+export default function Button({ customClassName, title = "", onClick }) {
+  return <button className={customClassName} onClick={onClick}>{title}</button>;
 }
