@@ -13,6 +13,7 @@
 
 .scrollContainer {
   overflow-x: scroll;
+  overflow-y: hidden;
   scroll-behavior: smooth;
   scrollbar-width: none;
 }
