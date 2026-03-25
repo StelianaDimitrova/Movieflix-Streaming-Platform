@@ -12,7 +12,7 @@ import History from "../pages/History.jsx";
 import MediaPage from "../pages/MediaPage.jsx";
 export default function MainLayout() {
   return (
-    <div>
+    <div className={classes.layoutWrapper}>
       <header className={classes.header}>
         <NavBar />
       </header>
