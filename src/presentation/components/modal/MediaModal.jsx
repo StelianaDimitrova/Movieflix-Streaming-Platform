@@ -13,16 +13,19 @@ export default function MediaModal() {
   const { selectedMovie, closeModal } = useContext(ModalContext);
   if (!selectedMovie) return null;
 
-  const typeOfMedia = type === "movie" ? "movie" : "tv";
+  const typeOfMedia =
+    type === "movie" || selectedMovie.release_date ? "movie" : "tv";
 
   function handlePlayButtonClick() {
     navigate(`/watch/${typeOfMedia}/${selectedMovie.id}`);
+    closeModal();
   }
 
   function handleAddButtonClick() {
     const currentFavs = JSON.parse(localStorage.getItem("myList") || "[]");
+    const isAlreadyInList = currentFavs.some((item) => item.id === selectedMovie.id);
 
-    if (!currentFavs.includes(selectedMovie)) {
+    if (!isAlreadyInList) {
       const updatedFavs = [...currentFavs, selectedMovie];
       localStorage.setItem("myList", JSON.stringify(updatedFavs));
     }
