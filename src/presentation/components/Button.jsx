@@ -1,3 +1,12 @@
-export default function Button({ customClassName, title = "", onClick }) {
-  return <button className={customClassName} onClick={onClick}>{title}</button>;
+export default function Button({
+  customClassName,
+  title = "",
+  onClick,
+  label,
+}) {
+  return (
+    <button className={customClassName} onClick={onClick} aria-label={label}>
+      {title}
+    </button>
+  );
 }

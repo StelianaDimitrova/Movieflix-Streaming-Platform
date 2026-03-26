@@ -58,19 +58,28 @@ export default function MovieCard({ movie, type, isMyList, onRemove }) {
       />
       <div className={classes.overlay}>
         <div className={classes.controls}>
-          <button onClick={handlePlayButtonClick}>
+          <button onClick={handlePlayButtonClick} aria-label="Play video">
             <PlayCircleOutlineOutlinedIcon />
           </button>
           {isMyList ? (
-            <button onClick={() => handleRemoveButtonClick(movie)}>
+            <button
+              onClick={() => handleRemoveButtonClick(movie)}
+              aria-label="Remove movie/show from My List"
+            >
               <RemoveCircleOutlineIcon />
             </button>
           ) : (
-            <button onClick={handleAddButtonClick}>
+            <button
+              onClick={handleAddButtonClick}
+              aria-label="Add movie/show to My List"
+            >
               <AddCircleOutlineIcon />
             </button>
           )}
-          <button onClick={() => openModal(displayedMovie)}>
+          <button
+            onClick={() => openModal(displayedMovie)}
+            aria-label="More information about movie/show"
+          >
             <InfoOutlineIcon />
           </button>
         </div>

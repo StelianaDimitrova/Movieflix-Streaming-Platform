@@ -30,11 +30,13 @@ export default function HeroBanner({ movie }) {
             customClassName={classes.playButton}
             title="Play"
             onClick={handlePlayButtonClick}
+            label="Play video"
           />
           <Button
             customClassName={classes.infoButton}
             title="More Info"
             onClick={() => openModal(movie)}
+            label="More information about movie/show"
           />
         </div>
       </div>

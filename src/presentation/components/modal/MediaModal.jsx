@@ -23,7 +23,9 @@ export default function MediaModal() {
 
   function handleAddButtonClick() {
     const currentFavs = JSON.parse(localStorage.getItem("myList") || "[]");
-    const isAlreadyInList = currentFavs.some((item) => item.id === selectedMovie.id);
+    const isAlreadyInList = currentFavs.some(
+      (item) => item.id === selectedMovie.id,
+    );
 
     if (!isAlreadyInList) {
       const updatedFavs = [...currentFavs, selectedMovie];
@@ -35,7 +37,11 @@ export default function MediaModal() {
     <dialog className={classes.dialog}>
       <div className={classes.backdrop} onClick={closeModal}>
         <div className={classes.modal} onClick={(e) => e.stopPropagation()}>
-          <button className={classes.closeBtn} onClick={closeModal}>
+          <button
+            className={classes.closeBtn}
+            onClick={closeModal}
+            aria-label="Close modal"
+          >
             X
           </button>
           <img
@@ -50,11 +56,13 @@ export default function MediaModal() {
                 customClassName={classes.playBtn}
                 title="Play"
                 onClick={handlePlayButtonClick}
+                label="Play video"
               />
               <Button
                 customClassName={classes.listBtn}
                 title="Add to My List"
                 onClick={handleAddButtonClick}
+                label="Add movie/show to My List"
               />
             </div>
             <p>{selectedMovie.overview}</p>
