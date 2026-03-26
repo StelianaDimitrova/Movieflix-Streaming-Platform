@@ -60,7 +60,7 @@ export default function MediaPage() {
             {selectedMovie?.title || selectedMovie?.name}
           </h2>
           <div className={classes.buttons}>
-            <button className={classes.btnAdd} onClick={handleAddButtonClick}>
+            <button className={classes.btnAdd} onClick={handleAddButtonClick} aria-label="Add movie/show to My List">
               Add to My List
             </button>
           </div>
