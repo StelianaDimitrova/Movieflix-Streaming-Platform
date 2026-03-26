@@ -23,8 +23,9 @@ export default function MediaModal() {
 
   function handleAddButtonClick() {
     const currentFavs = JSON.parse(localStorage.getItem("myList") || "[]");
+    const isAlreadyInList = currentFavs.some((item) => item.id === selectedMovie.id);
 
-    if (!currentFavs.includes(selectedMovie)) {
+    if (!isAlreadyInList) {
       const updatedFavs = [...currentFavs, selectedMovie];
       localStorage.setItem("myList", JSON.stringify(updatedFavs));
     }
