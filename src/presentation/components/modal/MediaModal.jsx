@@ -13,10 +13,12 @@ export default function MediaModal() {
   const { selectedMovie, closeModal } = useContext(ModalContext);
   if (!selectedMovie) return null;
 
-  const typeOfMedia = type === "movie" ? "movie" : "tv";
+  const typeOfMedia =
+    type === "movie" || selectedMovie.release_date ? "movie" : "tv";
 
   function handlePlayButtonClick() {
     navigate(`/watch/${typeOfMedia}/${selectedMovie.id}`);
+    closeModal();
   }
 
   function handleAddButtonClick() {
