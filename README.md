@@ -1,7 +1,10 @@
 # Movieflix Streaming Platform
 
+## Live Demo
+https://movieflix-prod.netlify.app
+
 ## Project Overview
-**Movieflix Streaming Platform** is a web application that replicates the functionality of popular streaming platforms. The app allows users to browse titles, watch trailers, and manage a personal list. Built with **React** and **TMDb API**.
+**Movieflix Streaming Platform** is a web application that replicates core features of modern streaming platforms such as browsing, trailer playback, and watchlist management. Built with **React** and **TMDb API**.
 
 ## Key Features
 - **Homepage**: Displays popular, top-rated, and upcoming titles.
@@ -9,16 +12,29 @@
 - **Detail Modal**: View more details via a popup.
 - **Personal List**: Add movies and TV shows to a watchlist.
 
+## Live Features
+- Real-time browsing of trending and popular movies via TMDb API
+- Trailer playback for selected titles
+- Personal watchlist with add/remove functionality
+- Dynamic routing for movie detail pages
+
 ## Technologies and Tools
-- **React** & **React Router**
-- **TMDb API**
-- **CSS Modules** & **Material UI**
-- **React Context API**
+- **React** (Hooks, Components)
+- **React Router** (Dynamic routing)
+- **TMDb REST API** integration
+- **Context API** for state management
+- **CSS Modules** & **Material UI** for styling
 
 ## Project Structure
 - **src/api/** — API calls to TMDb.
 - **src/application/** — State management and context.
 - **src/presentation/** — UI components (MovieCard, Modal, etc.).
+
+## Motivation
+This project was built to deepen my understanding of React ecosystem, API integration, and real-world application architecture similar to modern streaming platforms.
+
+## Deployment
+The project is deployed using Netlify with continuous deployment from the main branch.
 
 ## How to Run Locally
 1. **Clone the repository:**
